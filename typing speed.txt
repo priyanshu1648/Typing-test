@@ -1,0 +1,32 @@
+from time import *
+import random as r
+def mistake(par,user):
+    error=0
+    for i in range(len(para)):
+        try:
+            if para[i]!=user[i]:
+                error=error+1
+        except:
+            error=error+1
+    return error
+    
+def speed_time(time_s,time_e,user):
+    time_delay=time_e-time_s
+    time_roundoff=round(time_delay,2)
+    speed=len(user)/time_roundoff
+    return round(speed)
+    
+
+test={"this is a photograph with a number of graphs","today is sunday i am doing my project","rcb won by 10 runs"}
+test1=r.choice(test)
+print("*****typing speed*****")
+print(test1)
+print()
+print()
+time_1=time()
+testinput=input("start typing")
+time_2=time()
+
+print("SPEED: ",speed_time(time_1,time_2,testinput)," word per second")
+print("ERROR :",mistake(test1,testinput))
+print("*****************************************************************************************************************")
